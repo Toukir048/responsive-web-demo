@@ -23,6 +23,13 @@
     background: var(--common-gradient);
 }
 
+.h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--common-font);
+    color: white;
+}
+
 /* Body Size for Desktop is fixed with 1600px */
 .main-container {
     width: var(--desktop-width);
@@ -304,6 +311,120 @@ header button:hover {
 
 /* Rating Section End */
 
+/* techwave Section Start */
+.w-techwave{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: var(--desktop-width);
+    margin: auto;
+    height: 1120px;
+    background-color: #230E3D;
+}
+
+.w-techwave h1{
+    margin-top: 30px;
+}
+
+
+.m-grid-e {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 225px);
+    gap: 30px;
+    padding: 40px 0px;
+    width: 80%;
+    grid-template-areas:
+        "e1 e2 e2"
+        "e1 e3 e3"
+        "e4 e4 e5";
+}
+
+.epi-card {
+    background-color: #250D44;
+    border-radius: 40px;
+}
+.e1 { grid-area: e1; }
+.e2 { grid-area: e2; }
+.e3 { grid-area: e3; }
+.e4 { grid-area: e4; }
+.e5 { grid-area: e5; }
+
+/* techwave Section End */
+
+/* Episodes Grid Section Start */
+.episodes {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.video-card {
+    background: #250D44;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-content {
+    padding: 20px;
+}
+
+.video-content h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.video-content p {
+    font-size: 0.9rem;
+    color: #cbbbe9;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #7C4DFF;
+    font-weight: 600;
+}
+/* Episodes Grid Section End */
+
 /* Host Section Start */
 .host {
     display: flex;
@@ -378,18 +499,6 @@ header button:hover {
 .host-s-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(255, 78, 205, 0.4);
-}
-
-
-@media (max-width: 768px) {
-    .host-profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .host-info {
-        text-align: center;
-    }
 }
 /* Host Section End */
 

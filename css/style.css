@@ -252,14 +252,14 @@ header button:hover {
     text-align: center;
 }
 
-.about h1{
+.about h1 {
     font-size: 3rem;
     margin-bottom: 16px;
     font-weight: 700;
     font-family: var(--common-font);
 }
 
-.about p{
+.about p {
     font-size: 1rem;
     margin-bottom: 32px;
     line-height: 2;
@@ -268,15 +268,16 @@ header button:hover {
 }
 
 /* About Section End */
-.divider{
+.divider {
     border: none;
     height: 2px;
     background-color: #412567;
     margin: 0px 200px;
     opacity: 20%;
 }
+
 /* Rating Section start */
-.rating{
+.rating {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -284,7 +285,7 @@ header button:hover {
     text-align: center;
 }
 
-.rating-card h1{
+.rating-card h1 {
     font-size: 2.5rem;
     color: #00FF88;
     margin-bottom: 8px;
@@ -292,7 +293,7 @@ header button:hover {
     font-family: var(--common-font);
 }
 
-.rating-card p{
+.rating-card p {
     font-size: 1rem;
     color: #FFFFFF;
     margin-bottom: 8px;
@@ -300,11 +301,101 @@ header button:hover {
     text-transform: uppercase;
     font-family: var(--common-font);
 }
+
 /* Rating Section End */
+
+/* Host Section Start */
+.host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.host h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.host-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 60px;
+    background-color: #250D44;
+    border-radius: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.host-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.host-info {
+    text-align: left;
+    max-width: 1000px;
+}
+
+.host-info h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.host-info p {
+    font-size: 0.80rem;
+    line-height: 1.6;
+    color: #FFFFFF;
+    opacity: 40%;
+    letter-spacing: 0px;
+}
+
+.host-socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.host-s-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #442D63;
+
+}
+
+.host-s-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 78, 205, 0.4);
+}
+
+
+@media (max-width: 768px) {
+    .host-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .host-info {
+        text-align: center;
+    }
+}
+/* Host Section End */
 
 /* footer section Start */
 .footer {
-    background: #0c0729 url('/assets/bottombg.png') no-repeat center center;
+    background: #0c0729 url('/assets/bottombg.png');
     background-position: center;
     background-repeat: no-repeat;
     height: 412px;

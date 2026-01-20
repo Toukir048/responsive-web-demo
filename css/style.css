@@ -188,13 +188,11 @@ header button:hover {
     margin-bottom: 32px;
     line-height: 1.6;
     font-family: var(--common-font);
-    border: 2px solid #412567;
     white-space: nowrap;
     margin-bottom: 0px;
 }
 
 .banner-actions {
-    border: 2px solid #412567;
     display: flex;
     gap: 16px;
     margin-top: 24px;

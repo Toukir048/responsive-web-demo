@@ -1,5 +1,92 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Root Setup For Responsive View */
+:root {
+    --mobile-width: 576px;
+    --desktop-width: 1536px;
+    --tablet-width: 992px;
+    --common-bg: #1A0B2E;
+    --common-font: 'Inter', sans-serif;
+    --common-gradient: linear-gradient(47deg, rgba(247, 233, 63, 1) 17%, rgba(251, 9, 180, 1) 50%, rgba(145, 0, 248, 1) 81.60%);
+    --common-font-size: 1rem;
+}
+
+/* Common Class Setup */
+.gradient {
+    background: var(--common-gradient);
+    font-family: var(--common-font);
+}
+
+/* Body Size for Desktop is fixed with 1600px */
+.main-container {
+    width: var(--desktop-width);
+    margin: auto;
+}
+
+/* Header Section Start */
+header {
+    background: var(--common-bg);
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 92px;
+    width: 100vw;
+    font-family: var(--common-font);
+    border-bottom: 1px solid #412567;
+    padding: 0px 200px;
+    
+}
+
+
+header nav ul {
+    display: flex;
+    gap: 32px;
+    text-decoration: none;
+    font-size: 18px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #FF4C60;
+    transition: 0.3s;
+}
+
+header button {
+    background: var(--common-gradient);
+    height: 44px;
+    width: 135px;
+    color: white;
+    border-radius: 100px;
+    gap: 2px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: var(--common-font-size);
+    
+}
+
+header button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    transform: scale(0.98);
+}
+
+/* Header Section End */

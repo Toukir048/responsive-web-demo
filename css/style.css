@@ -28,6 +28,7 @@
     width: var(--desktop-width);
     margin: auto;
     font-family: var(--common-font);
+    background: var(--common-bg);
 }
 
 /* Header Section Start */
@@ -120,6 +121,7 @@ header button:hover {
     height: 100%;
     border-radius: 50%;
     display: block;
+    animation: pulse 2s infinite;
 }
 
 .microphone {
@@ -143,7 +145,7 @@ header button:hover {
     padding: 6px 12px;
     border-radius: 20px;
     z-index: 3;
-    animation: pulse 2s infinite
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -237,9 +239,72 @@ header button:hover {
 /* Banner Content End */
 /* Banner Section End */
 
+
+
+/* About Section Start */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+.about h1{
+    font-size: 3rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-family: var(--common-font);
+}
+
+.about p{
+    font-size: 1rem;
+    margin-bottom: 32px;
+    line-height: 2;
+    font-family: var(--common-font);
+    max-width: 1200px;
+}
+
+/* About Section End */
+.divider{
+    border: none;
+    height: 2px;
+    background-color: #412567;
+    margin: 0px 200px;
+    opacity: 20%;
+}
+/* Rating Section start */
+.rating{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.rating-card h1{
+    font-size: 2.5rem;
+    color: #00FF88;
+    margin-bottom: 8px;
+    font-weight: 900;
+    font-family: var(--common-font);
+}
+
+.rating-card p{
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    font-weight: 000;
+    text-transform: uppercase;
+    font-family: var(--common-font);
+}
+/* Rating Section End */
+
 /* footer section Start */
 .footer {
-    background: #0c0729 url('/assets/footer-bg.png');
+    background: #0c0729 url('/assets/bottombg.png') no-repeat center center;
     background-position: center;
     background-repeat: no-repeat;
     height: 412px;

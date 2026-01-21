@@ -322,12 +322,6 @@ header button:hover {
     text-align: center;
 }
 
-.about h1 {
-    font-size: 3rem;
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-family: var(--common-font);
-}
 
 .about p {
     font-size: 1rem;
@@ -335,6 +329,7 @@ header button:hover {
     line-height: 2;
     font-family: var(--common-font);
     max-width: 1200px;
+    opacity: 40%;
 }
 
 /* About Section End */
@@ -371,6 +366,19 @@ header button:hover {
     text-transform: uppercase;
     font-family: var(--common-font);
 }
+
+@media (max-width: 576px) {
+    .rating {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about p br{
+        display: none;
+        text-align:justify;
+    }
+    
+}
+
 
 /* Rating Section End */
 
@@ -583,6 +591,18 @@ header button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(255, 78, 205, 0.4);
 }
+
+
+@media (max-width: 576px) {
+    .host-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .host-info {
+        text-align: center;
+    }
+} 
 
 /* Host Section End */
 

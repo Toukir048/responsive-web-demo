@@ -166,7 +166,7 @@ header button:hover {
 /* Banner Hero Section Start */
 .banner {
     max-width: 100%;
-    min-height:auto;
+    min-height:760px;
     background-color: #2A0D3E;
     background-image: url("../assets/hero-bg.png");
     background-repeat: no-repeat;
@@ -176,6 +176,7 @@ header button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 
@@ -183,7 +184,7 @@ header button:hover {
     position: relative;
     width: 350px;
     height: 350px;
-    margin: auto;
+    margin: 20px 0px;
 }
 
 .circle {
@@ -235,6 +236,7 @@ header button:hover {
     }
 }
 
+
 /* Banner Hero Section End */
 
 /* Banner Content Start */
@@ -263,6 +265,9 @@ header button:hover {
     font-family: var(--common-font);
     white-space: nowrap;
     margin-bottom: 0px;
+}
+.banner-content p br{
+    display: none;
 }
 
 .banner-actions {
@@ -304,6 +309,36 @@ header button:hover {
 .btn-subscribe:hover {
     background: rgba(59, 247, 196, 0.1);
     transform: translateY(-2px);
+}
+
+@media screen and (max-width: 576px) {
+    #hero-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .microphone {
+        width: 80px;
+    }
+
+    .banner {
+        min-height: 600px;
+        padding: 20px 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }   
+
+    .banner-content p {
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+
+    .banner-content p br{
+        display: block;
+    }   
+    
 }
 
 /* Banner Content End */

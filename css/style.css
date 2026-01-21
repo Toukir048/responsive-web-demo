@@ -23,17 +23,24 @@
     background: var(--common-gradient);
 }
 
-.h1 {
+.head-text {
+    color: #fff;
     font-size: 3rem;
     font-weight: 700;
     font-family: var(--common-font);
-    color: white;
+    text-align: center;
+    margin-bottom: 32px;
 }
 
-/* Body Size for Desktop is fixed with 1600px */
+@media (max-width: 576px) {
+    .head-text {
+        font-size: 2rem;
+    }
+}
+
 .main-container {
-    width: var(--desktop-width);
-    margin: auto;
+    margin: 0px auto;
+    max-width: var(--desktop-width);
     font-family: var(--common-font);
     background: var(--common-bg);
 }
@@ -42,7 +49,7 @@
 header {
     background: var(--common-bg);
     color: white;
-    padding: 15px 0;
+    padding: 15px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,13 +104,69 @@ header button:hover {
     transition: all 0.3s ease;
 }
 
+
+#menu-toggle {
+    display: none;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+
+    header {
+        padding: 0 24px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .c-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 92px;
+        left: 0;
+        width: 100%;
+        background: #1A0B2E;
+        display: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    #menu-toggle:checked~.nav-menu {
+        display: block;
+    }
+}
+
 /* Header Section End */
 
 /* Banner Section Start */
 /* Banner Hero Section Start */
 .banner {
-    max-width: var(--desktop-width);
-    height: 760px;
+    max-width: 100%;
+    min-height:auto;
     background-color: #2A0D3E;
     background-image: url("../assets/hero-bg.png");
     background-repeat: no-repeat;
@@ -312,7 +375,7 @@ header button:hover {
 /* Rating Section End */
 
 /* techwave Section Start */
-.w-techwave{
+.w-techwave {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +387,7 @@ header button:hover {
     background-color: #230E3D;
 }
 
-.w-techwave h1{
+.w-techwave h1 {
     margin-top: 30px;
 }
 
@@ -346,84 +409,104 @@ header button:hover {
     background-color: #250D44;
     border-radius: 40px;
 }
-.e1 { grid-area: e1; }
-.e2 { grid-area: e2; }
-.e3 { grid-area: e3; }
-.e4 { grid-area: e4; }
-.e5 { grid-area: e5; }
+
+.e1 {
+    grid-area: e1;
+}
+
+.e2 {
+    grid-area: e2;
+}
+
+.e3 {
+    grid-area: e3;
+}
+
+.e4 {
+    grid-area: e4;
+}
+
+.e5 {
+    grid-area: e5;
+}
 
 /* techwave Section End */
-
-/* Episodes Grid Section Start */
+/* Featured episodes section Start  */
 .episodes {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
+    padding: 30px 20px;
 }
 
-.h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 50px;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.episodes-card-container {
+    display: flex;
     gap: 30px;
 }
 
-.video-card {
-    background: #250D44;
-    border-radius: 30px;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.episodes-card {
+    background-color: #250D44;
+    border-radius: 24px;
 }
 
-.video-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-}
-
-.video-wrapper {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 */
-    overflow: hidden;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    inset: 0;
+.episodes-video iframe {
     width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.video-content {
-    padding: 20px;
-}
-
-.video-content h3 {
-    font-size: 1.1rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.video-content p {
-    font-size: 0.9rem;
-    color: #cbbbe9;
-    line-height: 1.5;
-    margin-bottom: 15px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
 }
 
 .duration {
-    font-size: 0.85rem;
-    color: #7C4DFF;
+    display: flex;
+    gap: 5px;
+    color: #00FF88;
     font-weight: 600;
 }
-/* Episodes Grid Section End */
+
+.episodes-card-content {
+    padding: 24px;
+}
+
+.section-description {
+    margin: 12px 0;
+}
+
+.card-title {
+    color: #fff;
+    font-weight: 600;
+    font-family: var(--common-font);
+    padding: 10px 0px;
+}
+
+.card-description {
+    color: #fff;
+    font-weight: 200;
+    font-family: var(--common-font);
+    line-height: 1.5rem;
+    padding: 10px 0px;
+}
+
+
+
+@media (max-width: 576px) {
+    .episodes-card-container {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .episodes-card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .episodes-video iframe {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+}
+/* Featured episodes section End */
+
+
 
 /* Host Section Start */
 .host {
@@ -500,6 +583,7 @@ header button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(255, 78, 205, 0.4);
 }
+
 /* Host Section End */
 
 /* footer section Start */
